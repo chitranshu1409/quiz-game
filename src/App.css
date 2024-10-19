@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+/* General Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* App Container */
+.App {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Question Card Styling */
+.question-card {
+  background-color: #e9f0f8;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.question-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+/* Option Buttons */
+.options button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #4a90e2;
   color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.options button:hover {
+  background-color: #357abd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.options button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.5);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .question-card {
+    padding: 15px;
   }
+
+  .options button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Score Display */
+.score {
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.score h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.score p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
